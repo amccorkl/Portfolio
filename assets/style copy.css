@@ -1,0 +1,234 @@
+*  {
+    box-sizing: border-box;
+}
+
+body.container {
+    flex: 1 0 0;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgb(240, 233, 233);
+    background-color: rgba(33, 31, 31, 0.623);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: rgb(245, 240, 240);
+    font-size: 20px;
+}
+
+a:hover {
+    color: black;
+}
+
+header {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex: 49%;
+    color: rgb(245, 240, 240);}
+
+nav {
+    height: 100px;
+    display: flex;
+}
+
+nav ul {
+    display:flex;
+    flex-wrap: wrap;
+    margin: auto 35px 20px auto;
+}
+
+li {
+    margin: .75em;
+    list-style-type: none; 
+}
+
+/* h2 titles for each main section */
+.titles {
+    text-align: center;
+    width: 17%;
+    height: 100%;
+    color: rgb(245, 240, 240);
+    font-size: 25px;
+    border-right: 2px double rgb(240, 233, 233);
+}
+
+
+/* Styled main sections */
+.section {
+    padding: 20px;
+    border: 1px solid rgb(240, 233, 233);  
+    position: relative;
+    margin: 20px;
+}
+
+div#bio {
+    width: 95%
+}
+
+/* Short Bio section */
+.bio img {
+    width: 15%;
+    height: auto;
+    position: absolute;
+    right: 10px;
+    top: -53px;
+    z-index: 2;
+}
+
+p {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin-right: 175px;
+    z-index: 1;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+/* Github Work section */
+.section portfolio-grid {
+    /* display: flexbox;
+    flex-wrap: wrap; */
+    /* Three rows of projects */
+    display: grid;
+    grid-template-rows: 50% 25% 25%;
+    /* grid-template-columns: 50% 50%; */
+    border: 1px solid black;
+    padding: 5px;
+    margin: 20px;
+    width: 96%;
+    position: relative;
+}
+
+/* project 1 */
+.main-image img { 
+    flex: 1 0 0;
+    width: 100%;
+    height: auto;
+
+} 
+
+/* project 2 */
+#road img {
+    width: 100%;
+    height: 250px;
+}
+
+/* project 3 */
+#electrons img  {
+    width: 100%;
+    height: 250px;
+}
+
+/* label across the work images */
+.banner {
+    position: absolute;
+    background-color: darkgrey;
+    right: 5%;
+    width: 20%;
+    text-align: center;
+    margin-top: 5px;
+    text-decoration: underline;
+    border-radius: 10px;
+}
+
+footer {
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+}
+
+footer ul {
+    margin-top: -20px;
+    padding: 30px 0 20px 50px;
+    width: 100%;
+}
+
+footer li {
+    text-align: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+/* I want these to stack on each other in the smalles @media screen but they didn't
+    h1 
+    ul {
+        flex-direction: column;
+    } */
+    
+
+/*screen responsiveness*/
+@media screen and (max-width: 980px) {
+    header 
+    footer {
+        flex-direction: column;
+        }
+    .bio img {
+        top: 0px;
+    }
+    /* .contact.titles
+    .contact.ul {
+        flex-direction: column;
+    } */
+}
+     
+      
+@media screen and (max-width: 768px) {
+    header 
+    footer {
+        flex-direction: column;
+    }
+    .titles {
+        border: none;
+    }
+
+    p {
+        margin-right: 95px;
+        font-size: 18px;
+    }
+
+    #road img 
+    #electrons img {
+        width: fit-content;
+        height: 150px;
+    }
+
+    .banner {
+        width: 25%;
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    header 
+    footer  
+    .section bio {
+        flex-direction: column;
+    }
+
+    p {
+        font-size: 13px;
+        margin-right: auto;
+    }
+    .bio img {
+        position: initial;
+    }
+
+    h1 
+    .titles {
+        font-size: 15px;
+     } 
+
+    .titles {
+        width: auto;
+        text-align: left;
+    }
+}
+
