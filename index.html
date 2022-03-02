@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/style copy.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Anne McCorkle's Portfolio</title>
   </head>
 
@@ -19,7 +19,7 @@
             <a href="#bio">Bio</a>
           </li>
           <li>
-            <a href="#work">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
             <a href="#contact">Contact Me</a>
@@ -31,9 +31,7 @@
     <main>
       <!--styled main body of the portfolio-->
       <section class="section bio">
-        <img src="./assets/images/color-me-img.jpeg"
-          alt="Picture of Anne"
-        />
+        <img src="./assets/images/color-me-img.jpeg" alt="Picture of Anne" />
         <div id="bio">
           <h2 class="titles">Bio</h2>
 
@@ -47,38 +45,44 @@
       </section>
 
       <!-- Section with examples of work -->
-      <section class="section portfolio-grid">
-        <h2 class="titles">Projects</h2>
+      <section class="section portfolio-grid" style="display: flex">
+        <h2 class="titles" id="projects">Projects</h2>
+        
+        <div class="portfolio-box">
+          <!-- screen shot of Horiseon project -->
+          <div class="main-image" style="position: relative;">
+            <a href="https://amccorkl.github.io/Horiseon-Project/">
+              <div class="banner" id="banner1">Project 1 Refactoring</div>
+            </a>
+            <img
+              src="./assets/images/Horiseon-crop.jpeg"
+              alt="Screenshot of project"
+            />
+          </div>
 
-        <!-- screen shot of Horiseon project -->
-        <div class="main-image">
-          <a href="https://amccorkl.github.io/Horiseon-Project/">
-            <div class="banner">Project 1 Refactoring</div>
-          </a>
-          <img
-            src="./assets/images/Horiseon-crop.jpeg"
-            alt="Screenshot of project"
-          />
-        </div>
+          <!-- no project here yet, placeholder im -->
+          <div style="border: 1px black solid; display: flex; justify-content: space-between;">
+            <div class="secondary-images" id="image2">
+              <a href="#"><div class="banner" id="banner2" style="z-index: 1;">Project 2: Coming Soon</div> </a>
+              <img src="http://via.placeholder.com/800x400"></img>
+            </div>
 
-        <!-- no project here yet, placeholder im -->
-        <div class="secondary-images" id="road">
-          <a href="#"><div class="banner">Project 2: Coming Soon</div>
-          </a>
-          <img
-            src="./assets/images/sand.jpeg"
-            alt="Sand carved by the wind and water"
-          /> 
-        </div>
+            <!-- no project here yet, placeholder img -->
+            <div class="secondary-images" id="image3">
+              <a href="#"><div class="banner" id="banner3" style="z-index: 1;">Project 3: Coming Soon</div> </a>
+              <img src="http://via.placeholder.com/800x400"></img>
+            </div>
 
-        <!-- no project here yet, placeholder img -->
-        <div class="secondary-images" id="electrons">
-          <a href="#"><div class="banner">Project 3: Coming Soon</div>
-          </a>
-          <img
-            src="./Assets/images/Screen Shot 2021-12-31 at 2.19.17 PM.png"
-            alt="Computer networking envisioned artistically"
-          />
+            <!-- <div class="secondary-images" id="fourth">
+              <a href="#"><div class="banner" id="banner4" style="z-index: 1;">Project 4: Coming Soon</div> </a>
+              <img src="http://via.placeholder.com/400x400"></img>
+            </div>
+
+            <div class="secondary-images" id="fifth">
+              <a href="#"><div class="banner" id="banner5" style="z-index: 1;">Project 3: Coming Soon</div> </a>
+              <img src="http://via.placeholder.com/400x400"></img>
+            </div> -->
+          </div>
         </div>
       </section>
 
