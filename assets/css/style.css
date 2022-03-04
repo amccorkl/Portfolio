@@ -47,7 +47,7 @@ li {
     list-style-type: none; 
 }
 
-/* h2 titles for each main section */
+/* h2 titles for each main section, situated on the left-side of the screen */
 .titles {
     text-align: center;
     width: 17%;
@@ -66,17 +66,17 @@ li {
     margin: 20px;
 }
 
+/* Bio section */
 div#bio {
     width: 95%
 }
 
-/* Short Bio section */
 .bio img {
-    width: 10%;
+    width: 13%;
     height: auto;
     position: absolute;
-    right: 10px;
-    top: -33px;
+    right: 2%;
+    top: 0;
     z-index: 2;
 }
 
@@ -84,7 +84,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     padding: 0px;
-    margin-right: 175px;
+    margin-right: 13%;
     z-index: 1;
     color: aliceblue;
     font-size: 20px;
@@ -92,21 +92,25 @@ p {
 
 /* Github Work section */
 .section portfolio-grid {
-    /* Three rows of projects */
-    /* display: grid; */
-    /* grid-template-rows: 50% 25% 25%; */
+    display: flex;
     border: 1px solid black;
     padding: 5px;
     margin: 20px;
-    width: 96%;
+    width: 100%;
     height: 100%;
     position: relative;
 }
 
 .portfolio-box {
-    width: 80%;
-    margin-left: 25px;
-    
+    position: relative;
+    width: 94%;
+    margin-left: 3%;
+}
+
+.box2and3 {
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* project 1 */
@@ -117,6 +121,8 @@ p {
     border: 2px black solid;
 
 } 
+
+/* allows for later absolute positioning in the banners */
 .secondary-images {
     position: relative;
 
@@ -136,62 +142,38 @@ p {
     border: 2px black solid;
 }
 
-#image4 img  {
-    width: 100%;
-    height: 250px;
-    border: 2px black solid;
-}
-#image5 img  {
-    width: 100%;
-    height: 250px;
-    border: 2px black solid;
-}
-
-/* label across the work images */
-/* .banner {
-    position: absolute;
-    background-color: darkgrey;
-    right: 5%;
-    width: 20%;
-    text-align: center;
-    margin-bottom: 15px;
-    text-decoration: underline;
-    border-radius: 10px;
-    border: 1px black solid;
-} */
+/* each banner has a different placement depending on the image its superimposed on */
 #banner1 {
     position: absolute;
     background-color: rgb(89, 88, 88);
     left: 3%;
     text-align: center;
-    top: 15%;
+    top: 10%;
     text-decoration: underline;
     border-radius: 10px;
-    border: 1px black solid;
+    border: 2px red solid;
 }
 
 #banner2 {
     position: absolute;
     background-color: rgb(101, 99, 99);
     left: 5%;
-    /* width: 20%; */
     text-align: center;
-    /* margin-bottom: 15px; */
     text-decoration: underline;
     border-radius: 10px;
     border: 1px black solid;
+    z-index: 1;
 }
 
 #banner3 {
     position: absolute;
     background-color: rgb(94, 92, 92);
     right: 5%;
-    /* width: 20%; */
     text-align: center;
-    /* margin-bottom: 15px; */
     text-decoration: underline;
     border-radius: 10px;
     border: 1px black solid;
+    z-index: 1;
 }
 
 footer {
@@ -214,12 +196,7 @@ footer li {
 
 }
 
-/* I want these to stack on each other in the smalles @media screen but they didn't
-    h1 
-    ul {
-        flex-direction: column;
-    } */
-    
+ 
 
 /*screen responsiveness*/
 @media screen and (max-width: 980px) {
@@ -227,14 +204,12 @@ footer li {
     footer {
         flex-direction: column;
         }
+    /* this realigns the photo with the border as the screen shrinks */
     .bio img {
         top: 0px;
+        width: 15%;
     }
-    /* .contact.titles
-    .contact.ul {
-        flex-direction: column;
-    } */
-}
+}    
      
       
 @media screen and (max-width: 768px) {
@@ -242,24 +217,26 @@ footer li {
     footer {
         flex-direction: column;
     }
+    /* Eliminate the double border that off-set titles */
     .titles {
         border: none;
     }
-
     p {
-        margin-right: 95px;
+        margin-right: 25%;
         font-size: 18px;
     }
-
     #image2 img 
     #image3 img {
         width: fit-content;
         height: 150px;
     }
-
+    /* allows the banner to shrink and fit smaller screen sizes */
     .banner {
         width: 25%;
         font-size: small;
+    }
+    .bio img {
+        width: 25%;
     }
 }
 
@@ -272,7 +249,6 @@ footer li {
 
     p {
         font-size: 13px;
-        margin-right: 10%;
     }
     
     h1 
